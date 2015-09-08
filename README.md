@@ -7,4 +7,5 @@ followed by the extensions wrapped in quotes.
 - Supports option to permanently delete or send to trash can (default) using
 '-p' argument.
 
-From command line enter 'python cleanup.py -h' for more information.
+From command line enter 'python cleanup.py -h' for more information or open
+cleanup.py to read overview/instructions.
