@@ -13,7 +13,6 @@ Optional Args:
 
 Returns:
     Will print each file deleted to screen.
-    Also prints contents of directory after cleanup
 '''
 
 
@@ -58,8 +57,5 @@ def deleteFiles(deleteFiles, excludeFiles):
             else:
                 print('Sent to trash: ' + filename)
                 send2trash.send2trash(filename)
-
-    print(os.listdir())
-
 
 deleteFiles(delete, exclude)
