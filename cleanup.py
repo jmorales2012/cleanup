@@ -1,4 +1,22 @@
-# want to delete all files in this folder not ending in .py
+'''cleanup.py
+Simple command line tool to delete multiple files at once based on extension.
+
+Args:
+    delete: File extensions you want deleted wrapped in quotes.
+            'all' will delete all files in folder.
+
+Optional Args:
+    -p, permanent: Use if you want to permanently delete the files. If not
+                   specified, will only send files to trash.
+    -e, exclude: Used to denote file extensions you do not want deleted. Used
+                 when you want to delete 'all' files except certain types
+
+Returns:
+    Will print each file deleted to screen.
+    Also prints contents of directory after cleanup
+'''
+
+
 import argparse
 import os
 import send2trash
@@ -40,5 +58,8 @@ def deleteFiles(deleteFiles, excludeFiles):
             else:
                 print('Sent to trash: ' + filename)
                 send2trash.send2trash(filename)
+
+    print(os.listdir())
+
 
 deleteFiles(delete, exclude)
